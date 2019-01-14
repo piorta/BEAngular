@@ -1,0 +1,72 @@
+<div class="layout-topbar">
+    <a  class="layout-topbar-logo">
+        <img src="assets/layout/images/banquito.png">
+    </a>
+
+    <a href="#" class="layout-menu-button" (click)="app.onMenuButtonClick($event)">
+        <i class="fa fa-bars"></i>
+    </a>
+
+    <a href="#" class="layout-topbar-user" (click)="app.onTopbarMenuButtonClick($event)">
+        <img src="assets/layout/images/avatar.png" alt="olympia-layout" />
+    </a>
+
+    <ul  class="layout-topbar-usermenu" [ngClass]="{'layout-topbar-usermenu-active fadeInDown': app.topbarMenuActive}">
+        <li class="layout-topbar-usermenu-header">
+            <img src="assets/layout/images/avatar.png" alt="olympia-layout" />
+            <div class="layout-topbar-usermenu-info">
+                <div class="layout-topbar-usermenu-name">Usuario</div>
+               
+            </div>
+        </li>
+        <li>
+            <a href="#" (click)="app.onTopbarSubItemClick($event)">
+                <i class="fa fa-fw fa-user"></i>
+                <span class="topbar-item-name">Cerrar sesión</span>
+            </a>
+        </li>
+        <!----<li #settings>
+            <a href="#">
+                <i class="fa fa-fw fa-cog"></i>
+                <span class="topbar-item-name">Settings</span>
+            </a>
+        </li>
+        <li #messages>
+            <a href="#">
+                <i class="fa fa-fw fa-envelope-o"></i>
+                <span class="topbar-item-name">Messages</span>
+            </a>
+        </li>
+        <li #notifications>
+            <a href="#">
+                <i class="fa fa-fw fa-bell-o"></i>
+                <span class="topbar-item-name">Notifications</span>
+            </a>
+        </li>-->
+    </ul>
+
+    <ul class="layout-topbar-icons">
+      <!--  <li class="layout-topbar-search-item">
+            <div class="layout-topbar-search">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search"/>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="layout-topbar-icon-purple">
+                <i class="fa fa-file-o"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="layout-topbar-icon-yellow">
+                <i class="fa fa-paper-plane-o"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="layout-topbar-icon-green">
+                <i class="fa fa-calendar"></i>
+            </a>
+        </li>-->
+    </ul>
+
+</div>

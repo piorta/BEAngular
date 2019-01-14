@@ -1,0 +1,58 @@
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="card card-w-title">
+            <h1>POSICION CONSOLIDADA</h1>
+            <br>
+            <p-table [columns]="cols" [value]="cars1" selectionMode="single" dataKey="cuenta" [(selection)]="selectedCar"
+                [rows]="10" [responsive]="true" paginatorPosition="both">
+                <ng-template pTemplate="caption">
+                    CUENTAS
+                </ng-template>
+
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            {{col.header}}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            <span class="ui-column-title">{{col.header}}</span>
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            <br><br>
+
+
+            <p-table [columns]="cols" [value]="cars1" selectionMode="single" dataKey="cuenta" [(selection)]="selectedCar"
+            [rows]="10" [responsive]="true" paginatorPosition="both">
+            <ng-template pTemplate="caption">
+                PRÉSTAMOS
+            </ng-template>
+
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header}}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr [pSelectableRow]="rowData">
+                    <td *ngFor="let col of columns">
+                        <span class="ui-column-title">{{col.header}}</span>
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+
+
+        </div>
+    </div>
+</div>
